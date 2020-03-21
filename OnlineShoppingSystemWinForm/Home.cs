@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ClassLibrary.DAL;
+using ClassLibrary.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,7 @@ namespace OnlineShoppingSystemWinForm
 {
     public partial class Home : Form
     {
+
         public Home()
         {
             InitializeComponent();
@@ -19,13 +22,14 @@ namespace OnlineShoppingSystemWinForm
 
         private void BtnAddProduct_Click(object sender, EventArgs e)
         {
-
+            AddProduct frm = new AddProduct();
+            frm.ShowDialog();
         }
 
         private void BtnViewProducts_Click(object sender, EventArgs e)
         {
-            //ViewProducts frm = new ViewProducts();
-            //frm.ShowDialog();
+            ViewProducts frm = new ViewProducts();
+            frm.ShowDialog();
         }
     }
 }

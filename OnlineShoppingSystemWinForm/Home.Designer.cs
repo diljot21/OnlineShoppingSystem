@@ -36,38 +36,41 @@
             // 
             // BtnAddProduct
             // 
+            this.BtnAddProduct.BackColor = System.Drawing.Color.DimGray;
             this.BtnAddProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAddProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BtnAddProduct.ForeColor = System.Drawing.Color.White;
             this.BtnAddProduct.Location = new System.Drawing.Point(338, 182);
             this.BtnAddProduct.Name = "BtnAddProduct";
             this.BtnAddProduct.Size = new System.Drawing.Size(468, 94);
             this.BtnAddProduct.TabIndex = 0;
             this.BtnAddProduct.Text = "ADD PRODUCT";
-            this.BtnAddProduct.UseVisualStyleBackColor = true;
+            this.BtnAddProduct.UseVisualStyleBackColor = false;
             this.BtnAddProduct.Click += new System.EventHandler(this.BtnAddProduct_Click);
             // 
             // BtnViewProducts
             // 
+            this.BtnViewProducts.BackColor = System.Drawing.Color.DimGray;
             this.BtnViewProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnViewProducts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BtnViewProducts.ForeColor = System.Drawing.Color.White;
             this.BtnViewProducts.Location = new System.Drawing.Point(338, 356);
             this.BtnViewProducts.Name = "BtnViewProducts";
             this.BtnViewProducts.Size = new System.Drawing.Size(468, 94);
             this.BtnViewProducts.TabIndex = 1;
             this.BtnViewProducts.Text = "VIEW PRODUCTS";
-            this.BtnViewProducts.UseVisualStyleBackColor = true;
+            this.BtnViewProducts.UseVisualStyleBackColor = false;
             this.BtnViewProducts.Click += new System.EventHandler(this.BtnViewProducts_Click);
             // 
             // BtnDeleteProduct
             // 
+            this.BtnDeleteProduct.BackColor = System.Drawing.Color.DimGray;
             this.BtnDeleteProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnDeleteProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BtnDeleteProduct.ForeColor = System.Drawing.Color.White;
             this.BtnDeleteProduct.Location = new System.Drawing.Point(338, 531);
             this.BtnDeleteProduct.Name = "BtnDeleteProduct";
             this.BtnDeleteProduct.Size = new System.Drawing.Size(468, 94);
             this.BtnDeleteProduct.TabIndex = 2;
             this.BtnDeleteProduct.Text = "DELETE PRODUCT";
-            this.BtnDeleteProduct.UseVisualStyleBackColor = true;
+            this.BtnDeleteProduct.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
