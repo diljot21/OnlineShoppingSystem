@@ -10,6 +10,17 @@ namespace ClassLibrary.DAL
 {
     public class CustomerDao
     {
+        private List<Customer> _customers;
+        public Customer MemberLogin(string email, string password)
+        {
+            _customers = ReadAll();
+            foreach (Customer customer in _customers)
+            {
+                if (customer.Username == email && customer.Password == password) return customer;
+            }
+            return null;
+        }
+
         public void AddCustomer(Customer customer)
         {
             using (SqlConnection connection = new SqlConnection(
@@ -34,7 +45,7 @@ namespace ClassLibrary.DAL
 
         public List<Customer> ReadAll()
         {
-            List<Customer> customers = new List<Customer>();
+            _customers = new List<Customer>();
             using (SqlConnection connection = new SqlConnection(
                 @"Data Source=(localdb)\ProjectsV13;Initial Catalog=OnlineShoppingSystem;Integrated Security=True"))
             using (SqlCommand sqlCommand = new SqlCommand("SELECT * FROM CUSTOMER"))
@@ -46,11 +57,11 @@ namespace ClassLibrary.DAL
                 // Read all data and add to list
                 while (reader.Read())
                 {
-                    customers.Add(new Customer(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3),
+                    _customers.Add(new Customer(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3),
                          reader.GetString(4), reader.GetString(5), reader.GetInt64(6), reader.GetString(7), reader.GetString(8)));
                 }
             }
-            return customers;
+            return _customers;
         }
     }
 }

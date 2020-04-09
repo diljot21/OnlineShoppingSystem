@@ -5,15 +5,46 @@
 <html>
 <head runat="server">
     <title></title>
+    <style>
+        .MainMenu {
+            margin: 10px;
+            color: white;
+            font-size: large;
+        }
+
+        .MainMenu a {
+            color: white
+        }
+        .MainMenu ul {
+            background-color: black;
+        }
+        .MainMenu li {
+            margin: 5px;
+        }
+        .MainMenu li.dynamic {
+            margin: 10px;
+        }
+    </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
+        <header>
+            <h1>Employee Web</h1>
+            <div style="text-align: right;width:100%">
+                <asp:Label ID="LblMessage" runat="server"></asp:Label>
+                <asp:Button ID="BLogout" runat="server" text="Logout" OnClick="OnLogout" />
+            </div>
+            <div style="width:100%; background-color:black;">
+                <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" DataSourceID="SiteMapDataSource1"></asp:Menu>
+            </div>
+        </header>
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
+        <asp:SiteMapDataSource ID="SiteMapDataSource1" ShowStartingNode="false" runat="server" />
     </form>
 </body>
 </html>
