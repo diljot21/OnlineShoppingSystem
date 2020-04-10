@@ -11,7 +11,10 @@ namespace OnlineShoppingWebApp.Anonymous
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["User"] != null)
+            {
+                Response.Redirect("~/UserFolder/Home.aspx");
+            }
         }
     }
 }

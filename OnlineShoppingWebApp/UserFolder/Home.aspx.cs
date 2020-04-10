@@ -34,5 +34,33 @@ namespace OnlineShoppingWebApp.UserFolder
             }
             return concatProd;
         }
+
+        protected void BtnPurchaseProduct_Click(object sender, EventArgs e)
+        {
+            bool prodSelected = false;
+            List<Product> cartProducts = new List<Product>();
+            foreach (GridViewRow row in GvProducts.Rows)
+            {
+                CheckBox chkSelect = (CheckBox)row.FindControl("ChkSelect");//gives a reference to the checkbox contained in the row
+                if (chkSelect.Checked)
+                {
+                    int productId = int.Parse(row.Cells[1].Text);
+                    Product product = _products.Find(prod => prod.ProductId == productId);
+                    cartProducts.Add(product);
+                    prodSelected = true;
+                }
+            }
+
+            if (prodSelected)
+            {
+                // REDIRECT TO THE NEXT PAGE
+            }
+            else
+            {
+                // SHOW ERROR MESSAGE TO SELECT A PRODUCT
+            }
+
+            Server.TransferRequest("~/ViewEmployees.aspx");
+        }
     }
 }

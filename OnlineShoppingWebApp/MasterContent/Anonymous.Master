@@ -4,11 +4,32 @@
 
 <html>
 <head runat="server">
-    <title></title>
+    <title>Login</title>
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <!-- Background image: https://unsplash.com/photos/nfoRa6NHTbU Free Download -->
+    <style>
+        body{
+            background-image: url('../Images/LoginBg.jpg');
+        }
+    </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark primary-color">
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <asp:HyperLink ID="LoginLink" runat="server"  NavigateUrl="~/Anonymous/Login.aspx" CssClass="nav-link">Login Page</asp:HyperLink>
+                    </li>
+                    <li class="nav-item">
+                        <asp:HyperLink ID="RegisterLink" runat="server"  NavigateUrl="~/Anonymous/Register.aspx" CssStyle="nav-link">Register Page</asp:HyperLink>
+                    </li>
+                </ul>
+            </div>
+        </nav>      
+    </header>
     <form id="form1" runat="server">
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">

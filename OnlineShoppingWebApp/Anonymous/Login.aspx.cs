@@ -47,5 +47,10 @@ namespace OnlineShoppingWebApp.Anonymous
                 LblLoginStatus.Text = "Username or Password cannot be empty!";
             }
         }
+
+        protected void RegisterLinkBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Login.aspx");
+        }
     }
 }
