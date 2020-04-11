@@ -44,8 +44,8 @@ namespace OnlineShoppingWebApp.UserFolder
                 CheckBox chkSelect = (CheckBox)row.FindControl("ChkSelect");//gives a reference to the checkbox contained in the row
                 if (chkSelect.Checked)
                 {
-                    int productId = int.Parse(row.Cells[1].Text);
-                    Product product = _products.Find(prod => prod.ProductId == productId);
+                    string productName = row.Cells[2].Text;
+                    Product product = _products.Find(prod => prod.ProductName == productName);
                     cartProducts.Add(product);
                     prodSelected = true;
                 }
@@ -54,6 +54,8 @@ namespace OnlineShoppingWebApp.UserFolder
             if (prodSelected)
             {
                 // REDIRECT TO THE NEXT PAGE
+                Session["CartProducts"] = cartProducts;
+
             }
             else
             {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassLibrary.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,15 @@ namespace OnlineShoppingWebApp.UserFolder
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (PreviousPage != null && !IsPostBack)
+            {
+                GvCartProducts.DataSource = (List<Product>)Session["CartProducts"];
+                GvCartProducts.DataBind();
+            }
+            else
+            {
+                Response.Redirect("~/UserFolder/Home.aspx");
+            }
         }
     }
 }

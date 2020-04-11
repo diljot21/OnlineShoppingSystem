@@ -20,5 +20,5 @@
             <asp:BoundField DataField="ProductDescription" HeaderText="Description"/>
         </Columns>
     </asp:GridView>
-    <asp:Button ID="BtnPurchaseProduct" runat="server" Text="Purchase Product" OnClick="BtnPurchaseProduct_Click" />
+    <asp:Button ID="BtnPurchaseProduct" runat="server" Text="Purchase Product" OnClick="BtnPurchaseProduct_Click" PostBackUrl="~/UserFolder/ViewCart.aspx" />
 </asp:Content>
