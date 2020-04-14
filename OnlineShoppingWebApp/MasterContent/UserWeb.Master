@@ -54,7 +54,7 @@
                 <asp:Label ID="LblMessage" runat="server"></asp:Label>
                 <asp:Button ID="BLogout" runat="server" text="Logout" OnClick="OnLogout" />
             </div>
-            <div style="width:100%; background-color:black;">
+            <div style="width:100%; background-color: #f8f7ff;">
                 <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" DataSourceID="SiteMapDataSource1"></asp:Menu>
             </div>
         </header>

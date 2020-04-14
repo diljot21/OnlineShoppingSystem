@@ -12,14 +12,14 @@ namespace OnlineShoppingWebApp.UserFolder
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            GvCartProducts.DataSource = (List<Product>)Session["CartProducts"];
+            GvCartProducts.DataBind();
             if (PreviousPage != null && !IsPostBack)
             {
-                GvCartProducts.DataSource = (List<Product>)Session["CartProducts"];
-                GvCartProducts.DataBind();
             }
             else
             {
-                Response.Redirect("~/UserFolder/Home.aspx");
+                //Response.Redirect("~/UserFolder/Home.aspx");
             }
         }
     }

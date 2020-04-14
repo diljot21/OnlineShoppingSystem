@@ -29,7 +29,7 @@ namespace OnlineShoppingWebApp.UserFolder
             List<Product> concatProd = new List<Product>();
             foreach(Product product in _products)
             {
-                product.ProductImage = @"~\ClassLibrary\Images\ProductImages\" + product.ProductImage;
+                product.ProductImage = @"C:\Users\diljo\Desktop\C# Project\OnlineShoppingSystem\OnlineShoppingSystem\ClassLibrary\Images\ProductImages\" + product.ProductImage;
                 concatProd.Add(product);
             }
             return concatProd;
@@ -55,14 +55,14 @@ namespace OnlineShoppingWebApp.UserFolder
             {
                 // REDIRECT TO THE NEXT PAGE
                 Session["CartProducts"] = cartProducts;
-
+                Response.Redirect("~/UserFolder/ViewCart.aspx");
             }
             else
             {
                 // SHOW ERROR MESSAGE TO SELECT A PRODUCT
             }
 
-            Server.TransferRequest("~/ViewEmployees.aspx");
+            //Server.TransferRequest("~/ViewEmployees.aspx");
         }
     }
 }
