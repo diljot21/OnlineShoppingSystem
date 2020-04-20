@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.BtnAddProduct = new System.Windows.Forms.Button();
+            this.BtnOrders = new System.Windows.Forms.Button();
             this.BtnViewProducts = new System.Windows.Forms.Button();
-            this.BtnDeleteProduct = new System.Windows.Forms.Button();
+            this.BtnCustomers = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // BtnAddProduct
+            // BtnOrders
             // 
-            this.BtnAddProduct.BackColor = System.Drawing.Color.DimGray;
-            this.BtnAddProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAddProduct.ForeColor = System.Drawing.Color.White;
-            this.BtnAddProduct.Location = new System.Drawing.Point(338, 182);
-            this.BtnAddProduct.Name = "BtnAddProduct";
-            this.BtnAddProduct.Size = new System.Drawing.Size(468, 94);
-            this.BtnAddProduct.TabIndex = 0;
-            this.BtnAddProduct.Text = "ADD PRODUCT";
-            this.BtnAddProduct.UseVisualStyleBackColor = false;
-            this.BtnAddProduct.Click += new System.EventHandler(this.BtnAddProduct_Click);
+            this.BtnOrders.BackColor = System.Drawing.Color.DimGray;
+            this.BtnOrders.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnOrders.ForeColor = System.Drawing.Color.White;
+            this.BtnOrders.Location = new System.Drawing.Point(338, 182);
+            this.BtnOrders.Name = "BtnOrders";
+            this.BtnOrders.Size = new System.Drawing.Size(468, 94);
+            this.BtnOrders.TabIndex = 0;
+            this.BtnOrders.Text = "ORDERS";
+            this.BtnOrders.UseVisualStyleBackColor = false;
+            this.BtnOrders.Click += new System.EventHandler(this.BtnOrders_Click);
             // 
             // BtnViewProducts
             // 
@@ -56,21 +56,21 @@
             this.BtnViewProducts.Name = "BtnViewProducts";
             this.BtnViewProducts.Size = new System.Drawing.Size(468, 94);
             this.BtnViewProducts.TabIndex = 1;
-            this.BtnViewProducts.Text = "VIEW PRODUCTS";
+            this.BtnViewProducts.Text = "PRODUCTS";
             this.BtnViewProducts.UseVisualStyleBackColor = false;
             this.BtnViewProducts.Click += new System.EventHandler(this.BtnViewProducts_Click);
             // 
-            // BtnDeleteProduct
+            // BtnCustomers
             // 
-            this.BtnDeleteProduct.BackColor = System.Drawing.Color.DimGray;
-            this.BtnDeleteProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnDeleteProduct.ForeColor = System.Drawing.Color.White;
-            this.BtnDeleteProduct.Location = new System.Drawing.Point(338, 531);
-            this.BtnDeleteProduct.Name = "BtnDeleteProduct";
-            this.BtnDeleteProduct.Size = new System.Drawing.Size(468, 94);
-            this.BtnDeleteProduct.TabIndex = 2;
-            this.BtnDeleteProduct.Text = "DELETE PRODUCT";
-            this.BtnDeleteProduct.UseVisualStyleBackColor = false;
+            this.BtnCustomers.BackColor = System.Drawing.Color.DimGray;
+            this.BtnCustomers.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCustomers.ForeColor = System.Drawing.Color.White;
+            this.BtnCustomers.Location = new System.Drawing.Point(338, 531);
+            this.BtnCustomers.Name = "BtnCustomers";
+            this.BtnCustomers.Size = new System.Drawing.Size(468, 94);
+            this.BtnCustomers.TabIndex = 2;
+            this.BtnCustomers.Text = "CUSTOMERS";
+            this.BtnCustomers.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -90,9 +90,9 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1184, 681);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.BtnDeleteProduct);
+            this.Controls.Add(this.BtnCustomers);
             this.Controls.Add(this.BtnViewProducts);
-            this.Controls.Add(this.BtnAddProduct);
+            this.Controls.Add(this.BtnOrders);
             this.Name = "Home";
             this.Text = "Online Shopping System - Server";
             this.ResumeLayout(false);
@@ -102,9 +102,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button BtnAddProduct;
+        private System.Windows.Forms.Button BtnOrders;
         private System.Windows.Forms.Button BtnViewProducts;
-        private System.Windows.Forms.Button BtnDeleteProduct;
+        private System.Windows.Forms.Button BtnCustomers;
         private System.Windows.Forms.Label label1;
     }
 }

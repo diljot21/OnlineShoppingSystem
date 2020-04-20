@@ -14,7 +14,7 @@
             <asp:BoundField DataField="ProductPrice" HeaderText="Price"/>
             <asp:TemplateField HeaderText="Quantity">
                     <ItemTemplate>
-                        <asp:TextBox ID="TxtQuantity" TextMode="Number" runat="server" min="1" max="10" value="1" />
+                        <asp:TextBox ID="TxtQuantity" TextMode="Number" runat="server" min="1" max="10" Text="1"/>
                     </ItemTemplate>
             </asp:TemplateField>
         </Columns>

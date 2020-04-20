@@ -19,16 +19,17 @@ namespace OnlineShoppingSystemWinForm
         {
             InitializeComponent();
         }
-
-        private void BtnAddProduct_Click(object sender, EventArgs e)
-        {
-            AddProduct frm = new AddProduct();
-            frm.ShowDialog();
-        }
+        
 
         private void BtnViewProducts_Click(object sender, EventArgs e)
         {
             ViewProducts frm = new ViewProducts();
+            frm.ShowDialog();
+        }
+
+        private void BtnOrders_Click(object sender, EventArgs e)
+        {
+            Orders frm = new Orders();
             frm.ShowDialog();
         }
     }

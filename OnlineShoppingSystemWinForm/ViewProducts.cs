@@ -52,5 +52,11 @@ namespace OnlineShoppingSystemWinForm
             dgProducts.DataSource = products;
             dgProducts.Refresh();
         }
+
+        private void BtnAddProduct_Click(object sender, EventArgs e)
+        {
+            AddProduct frm = new AddProduct();
+            frm.ShowDialog();
+        }
     }
 }

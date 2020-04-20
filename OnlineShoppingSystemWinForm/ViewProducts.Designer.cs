@@ -59,6 +59,7 @@
             this.BtnAddProduct.TabIndex = 1;
             this.BtnAddProduct.Text = "ADD PRODUCT";
             this.BtnAddProduct.UseVisualStyleBackColor = false;
+            this.BtnAddProduct.Click += new System.EventHandler(this.BtnAddProduct_Click);
             // 
             // BtnUpdateProduct
             // 

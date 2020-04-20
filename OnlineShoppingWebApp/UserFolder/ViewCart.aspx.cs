@@ -24,9 +24,9 @@ namespace OnlineShoppingWebApp.UserFolder
             //Response.Redirect("~/UserFolder/Home.aspx");
             foreach (GridViewRow row in GvCartProducts.Rows)
             {
-                TextBox tb = (TextBox)row.FindControl("TxtQuantity");
-                //int quantity = int.Parse(tb.Text);
-                int quantity = 1;
+                string tb = ((TextBox)row.FindControl("TxtQuantity")).Text;
+                int quantity = int.Parse(tb);
+                //int quantity = 1;
                 _products.Find(prod => prod.ProductName == row.Cells[1].Text).Quantity = quantity;
             }
             OrderDao orderDao = new OrderDao();

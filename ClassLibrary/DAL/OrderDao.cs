@@ -23,17 +23,13 @@ namespace ClassLibrary.DAL
                 sqlCommand.Parameters.AddWithValue("@OCustId", customerId);
                 sqlCommand.Parameters.AddWithValue("@OOrderDate", DateTime.Now.ToString());
                 sqlCommand.Parameters.AddWithValue("@OOrderTotal", "32");
-                //sqlCommand.ExecuteNonQuery();
-
                 newId = Convert.ToInt32(sqlCommand.ExecuteScalar());
             }
-
             AddOrderProduct(cartItems, newId);
         }
 
         public void AddOrderProduct(List<Product> cartItems, int newId)
         {
-
             foreach (Product product in cartItems)
             {
                 using (SqlConnection connection = new SqlConnection(
@@ -50,6 +46,26 @@ namespace ClassLibrary.DAL
                     sqlCommand.ExecuteNonQuery();
                 }
             }
+        }
+
+        public List<Order> ReadAllOrders()
+        {
+            List<Order> orders = new List<Order>();
+            using (SqlConnection connection = new SqlConnection(
+                @"Data Source=(localdb)\ProjectsV13;Initial Catalog=OnlineShoppingSystem;Integrated Security=True"))
+            using (SqlCommand sqlCommand = new SqlCommand("SELECT * FROM [Order]"))
+            {
+                connection.Open();
+                sqlCommand.Connection = connection;
+                SqlDataReader reader = sqlCommand.ExecuteReader();
+
+                // Read all data and add to list
+                while (reader.Read())
+                {
+                    orders.Add(new Order(reader.GetInt32(1), reader.GetDateTime(2), reader.GetInt32(3), reader.GetInt32(0)));
+                }
+            }
+            return orders;
         }
     }
 }
