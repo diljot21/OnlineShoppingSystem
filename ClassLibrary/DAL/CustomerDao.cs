@@ -21,11 +21,21 @@ namespace ClassLibrary.DAL
             return null;
         }
 
+        public bool UsernameDuplicateCheck(string username)
+        {
+            _customers = ReadAll();
+            foreach (Customer customer in _customers)
+            {
+                if (customer.Username == username) return true;
+            }
+            return false;
+        }
+
         public void AddCustomer(Customer customer)
         {
             using (SqlConnection connection = new SqlConnection(
                 @"Data Source=(localdb)\ProjectsV13;Initial Catalog=OnlineShoppingSystem;Integrated Security=True"))
-            using (SqlCommand sqlCommand = new SqlCommand($"insert into product (Username, Password, Email, FirstName, LastName, " +
+            using (SqlCommand sqlCommand = new SqlCommand($"INSERT INTO Customer (Username, Password, Email, FirstName, LastName, " +
                 $"Phone, Address, PostalCode) values (@CUsername, @CPassword, @CEmail, @CFirstName, @CLastName, @CPhone, @CAddress, @CPostalCode)")
             )
             {
@@ -57,8 +67,8 @@ namespace ClassLibrary.DAL
                 // Read all data and add to list
                 while (reader.Read())
                 {
-                    _customers.Add(new Customer(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3),
-                         reader.GetString(4), reader.GetString(5), reader.GetInt64(6), reader.GetString(7), reader.GetString(8)));
+                    _customers.Add(new Customer(reader.GetString(1), reader.GetString(2), reader.GetString(3),
+                         reader.GetString(4), reader.GetString(5), reader.GetInt64(6), reader.GetString(7), reader.GetString(8), customerId: reader.GetInt32(0)));
                 }
             }
             return _customers;

@@ -6,7 +6,7 @@
     <div style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); border-radius:50%;" id="later1">
 
     
-    <div class="modal-body" style=" background-color: rgba(225, 225, 225, .9)">
+    <div class="modal-body" style=" background-color: rgba(225, 225, 225, .9); padding: 100px 100px 100px 100px; ">
         <div class ="row">
             <div class="col-xs-6">
             
@@ -28,6 +28,7 @@
             </div>
             <div class="col-xs-6">
                 <p class="lead">Developed by: <span class="text-success">DILJOT SEKHON</span></p>
+                <p class="lead">Developed by: <span class="text-success">MACKENZIE HEAPS</span></p>
             </div>
         </div>
     </div>

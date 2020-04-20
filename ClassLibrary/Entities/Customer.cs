@@ -26,8 +26,8 @@ namespace ClassLibrary.Entities
 
         public string PostalCode { get; set; }
 
-        public Customer(int customerId, string username, string password, string email, string firstName, string lastName, 
-            long phone, string address, string postalCode)
+        public Customer(string username, string password, string email, string firstName, string lastName, 
+            long phone, string address, string postalCode, int customerId = 0)
         {
             CustomerId = customerId;
             Username = username;

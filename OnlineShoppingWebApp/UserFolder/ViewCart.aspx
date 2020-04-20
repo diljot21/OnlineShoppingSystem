@@ -19,4 +19,5 @@
             </asp:TemplateField>
         </Columns>
     </asp:GridView>
+    <asp:Button ID="BtnCheckout" runat="server" Text="CHECKOUT" CssClass="btn btn-outline-dark" OnClick="BtnCheckout_Click"/>
 </asp:Content>

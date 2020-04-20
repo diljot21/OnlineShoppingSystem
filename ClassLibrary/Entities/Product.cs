@@ -12,7 +12,7 @@ namespace ClassLibrary.Entities
         private string _productImage;
         private double _productPrice;
         private int _categoryId;
-        
+        private int _quantity;
 
         public int ProductId
         {
@@ -44,9 +44,14 @@ namespace ClassLibrary.Entities
             get { return _categoryId; }
             set { _categoryId = value; }
         }
+        public int Quantity
+        {
+            get { return _quantity; }
+            set { _quantity = value; }
+        }
 
         public Product(int productId, string productName, string productDescription, string productImage, 
-            double productPrice, int categoryId)
+            double productPrice, int categoryId, int quantity=0)
         {
             ProductId = productId;
             ProductName = productName;
@@ -54,6 +59,7 @@ namespace ClassLibrary.Entities
             ProductImage = productImage;
             ProductPrice = productPrice;
             CategoryId = categoryId;
+            Quantity = quantity;
         }
     }
 }

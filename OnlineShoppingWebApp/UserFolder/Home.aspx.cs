@@ -16,7 +16,8 @@ namespace OnlineShoppingWebApp.UserFolder
         {
             ProductConnectedDao productConnectedDao = new ProductConnectedDao();
             _products = productConnectedDao.ReadAll();
-            Session["ProductList"] = concatImage();
+            //Session["ProductList"] = concatImage();
+            Session["ProductList"] = _products;
             if (!IsPostBack)
             {
                 GvProducts.DataSource = (List<Product>) Session["ProductList"];
