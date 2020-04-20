@@ -16,9 +16,6 @@
         Phone Number:
         <asp:TextBox ID="TxtPhoneNumber" runat="server" input="number"></asp:TextBox>
         <br />
-        Date of Birth:
-        <asp:TextBox ID="TxtDoB" TextMode="Date" runat="server" required=""></asp:TextBox>
-        <br />
         Address:
         <asp:TextBox ID="TxtAddress" runat="server" required=""></asp:TextBox>
         <br />

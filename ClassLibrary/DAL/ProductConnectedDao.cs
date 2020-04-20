@@ -31,7 +31,6 @@ namespace ClassLibrary.DAL
 
         public void AddProduct(Product product)
         {
-            //needs to be cleaned up
             using (SqlConnection connection = new SqlConnection(
                 @"Data Source=(localdb)\ProjectsV13;Initial Catalog=OnlineShoppingSystem;Integrated Security=True"))
             using (SqlCommand sqlCommand = new SqlCommand($"insert into product (productName, productDescription, productImage, " +

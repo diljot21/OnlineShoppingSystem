@@ -178,6 +178,7 @@
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="UserFolder\Home.aspx" />
+    <Content Include="UserFolder\OrderSuccessful.aspx" />
     <Content Include="UserFolder\ViewCart.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.sitemap" />
@@ -218,6 +219,13 @@
     </Compile>
     <Compile Include="UserFolder\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserFolder\OrderSuccessful.aspx.cs">
+      <DependentUpon>OrderSuccessful.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserFolder\OrderSuccessful.aspx.designer.cs">
+      <DependentUpon>OrderSuccessful.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserFolder\ViewCart.aspx.cs">
       <DependentUpon>ViewCart.aspx</DependentUpon>
