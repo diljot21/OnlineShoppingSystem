@@ -32,5 +32,11 @@ namespace OnlineShoppingSystemWinForm
             Orders frm = new Orders();
             frm.ShowDialog();
         }
+
+        private void BtnCustomers_Click(object sender, EventArgs e)
+        {
+            Customers frm = new Customers();
+            frm.ShowDialog();
+        }
     }
 }

@@ -67,5 +67,26 @@ namespace ClassLibrary.DAL
             }
             return orders;
         }
+
+        public List<Order> SpecificCustomerOrders(int customerId)
+        {
+            List<Order> orders = new List<Order>();
+            using (SqlConnection connection = new SqlConnection(
+                @"Data Source=(localdb)\ProjectsV13;Initial Catalog=OnlineShoppingSystem;Integrated Security=True"))
+            using (SqlCommand sqlCommand = new SqlCommand("SELECT * FROM [Order] WHERE CustomerId = @OOrderId"))
+            {
+                connection.Open();
+                sqlCommand.Connection = connection;
+                sqlCommand.Parameters.AddWithValue("OOrderId", customerId);
+                SqlDataReader reader = sqlCommand.ExecuteReader();
+
+                // Read all data and add to list
+                while (reader.Read())
+                {
+                    orders.Add(new Order(reader.GetInt32(1), reader.GetDateTime(2), reader.GetInt32(3), reader.GetInt32(0)));
+                }
+            }
+            return orders;
+        }
     }
 }

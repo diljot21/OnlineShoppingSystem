@@ -3,5 +3,6 @@
   <siteMapNode url="" title=""  description="">
     <siteMapNode url="~/UserFolder/Home.aspx" title="Home"  description="" />
     <siteMapNode url="~/UserFolder/ViewCart.aspx" title="View Cart"  description="" />
+    <siteMapNode url="~/UserFolder/Orders.aspx" title="Orders"  description="" />
   </siteMapNode>
 </siteMap>
